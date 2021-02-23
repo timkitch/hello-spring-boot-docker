@@ -13,5 +13,4 @@ FROM openjdk:8-jre-alpine
 # Copy the jar to the production image
 COPY --from=builder /app/target/hello-spring-boot-docker-*.jar /hello-spring-boot-docker.jar
 
-#CMD ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/hello-spring-boot-docker.jar"]
 CMD ["java", "-jar", "/hello-spring-boot-docker.jar"]
